@@ -1,0 +1,78 @@
+/* Goals
+      1) Manipulate the list of Journal Entry Links (".sidenav__link") so that they are outside of the browser window - NEGATIVE POSITION RIGHT.
+            A) Appearance:
+                  - rounded tabs - BORDER RADIUS
+                  - color dependand on MOOD SELECTION
+                  - no text for now... 
+      2) On hover, links should extend left - POSITION RIGHT >= 0 - to show the full date of the individual journal entry. (need HTML elements for date, month, and year.)
+      3) On click, drop down appears to show 
+            - journal entry title
+            - beginning of the entry
+            - button to view
+            - button to delete
+            - button to edit
+
+      4) research collapsible? 
+      5) how to show only a portion of content? 
+      6) will need to use JS to add classes when user performs certain actions */
+
+.content--right {
+      display: flex;
+      flex-direction: column;
+      align
+}
+
+.sidenav__link {
+      /* Position needs to be ABSOLUTE to fix the links relative to the browswer window. position is outside of window to the right, position right needs to be negative px.*/
+
+      position: absolute; 
+      right: -150px; 
+
+      /* transition occurs on hover bc position changes.
+      modifying transition duration to slow down - eliminate "jumpy" hover transition. */
+
+      transition: 0.5s; 
+
+      /* setting specific width - will not change */
+      width: 175px;
+
+      /* setting starting height - will increase on hover */
+
+      height: 15px;
+
+      /* <a> tags have specified default styling. changing text white helvetica with no underline */
+      
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      text-decoration: none; /* Remove underline */
+      font-size: 10px;
+      color: white ; 
+    }
+
+/* use :hover to add new properties for when user hovers over link */
+
+    .sidenav__link:hover {
+      right: -75px;
+      height: 25px;
+      font-size: 15px;
+    }
+    
+    /* The about link: 20px from the top with a green background */
+    #about {
+      top: 20px;
+      background-color: #4CAF50;
+    }
+    
+    #blog {
+      top: 80px;
+      background-color: #2196F3; /* Blue */
+    }
+    
+    #projects {
+      top: 140px;
+      background-color: #f44336; /* Red */
+    }
+    
+    #contact {
+      top: 200px;
+      background-color: #555 /* Light Black */
+    }
