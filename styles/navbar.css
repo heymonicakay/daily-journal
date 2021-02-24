@@ -18,7 +18,7 @@
       .content--right {
             display: flex;
             flex-direction: column;
-      }
+      };
       
       .sidenav__link {
                   /* Position needs to be ABSOLUTE to fix the links relative to the browswer window. position is outside of window to the right, position right needs to be negative px.*/
@@ -35,12 +35,13 @@
             font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
             text-decoration: none;
             font-size: 10px;
-            color
-            }
+            color: #473131a9;
+            };
       
       /* use :hover to add new properties for when user hovers over link */
-          .sidenav__link:hover {
+      .sidenav__link {
             right: -75px;
             height: 25px;
             font-size: 15px;
-          }
+            background-color: red;
+            };
