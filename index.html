@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Daily Journal</title>
-      <link rel="stylesheet" href="./styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Journal</title>
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-      <aside class="sidebar content--right">
-            <nav class="sidenav">
-            </nav>
-      </aside>
+  <header class="header">
+  </header>
 
-      <main class="content--left">
-            <section class="journalEntry"></section>
-      </main>
+  <aside class="sidebar sidebar--genie sidebar--right">
+    <nav class="sidenav entry--list">
+    </nav>
+  </aside>
+
+  <main class="content--left">
+    <section class="journal-entry">
+      <article>
+        <section class="select mood section section--mood">
+        </section>
+        <section class="section concept section--concept">
+          <label for="concept--input">
+          </label>
+          <input type="text" class="concept--input">
+          
+        </section>
+      </article>
+    </section>
+  </main>
+
+<script type="module" src="./scripts/main.js"></script>
+
 </body>
 </html>
+
+

@@ -1,12 +1,15 @@
-export const JournalEntryCompontent = (entry) => {
+export const JournalEntry = (entry) => {
       return `
-            <a class="sidenav__link" href="#">
-                  <div class="sidenav__text--date">
-                        ${entry.date}
-                  </div>
-                  <div class="sidenav__text--entry">
-                        ${entry.entry}
-                  </div>      
-            </a>
-      `
-}
+      <section class="je--${entry.id}">
+          <p class="je--date">${entry.date}</p>
+          <p class="je--concepts">${entry.concepts}</p>
+          <p class="je--entry">${entry.entry}</p>
+      </section>
+      <button class="btn btn-del--${entry.id}">
+        Delete Entry
+      </button>
+      <button class="btn btn-edit--${entry.id}">
+        Edit Entry
+      </button>
+      `;
+  }

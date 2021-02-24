@@ -1,17 +1,17 @@
-import { useJournalEntries } from "./JournalDataProvider.js"
-import { JournalEntryCompontent } from "./JournalEntry.js"
+import { useJournalData } from "./JournalData.js"
+import { JournalEntry } from "./JournalEntry.js"
 
-const contentTarget = document.querySelector(".sidenav")
+const savedEntries = document.querySelector(".entry--list")
 
-export const EntryList = ( ) => {
+export const EntryList = () => {
+  const allEntries = useJournalData()
 
-    const entries = useJournalEntries()
-
-    contentTarget.innerHTML = ""
-
-    entries.array.forEach((currentEntry) => {
-          
-      entryList.innerHTML += JournalEntryCompontent(entry)
-    }
+  for (const entry of allEntries) {
+      savedEntries.innerHTML += `
+        ${JournalEntry(entry)}
+      `
+  }
 }
 
+// this is testing stashes
+// as;ovinewa;owinf;aeoihat;woiehtg;ekha;wske
